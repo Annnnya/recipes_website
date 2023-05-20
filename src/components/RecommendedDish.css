@@ -1,0 +1,23 @@
+.dish-block {
+    height: 100%;
+    width: 25%;
+    text-align: left;
+    min-width: 300px;
+}
+
+.recommendation-photo {
+    height: 300px;
+    width: 100%;
+    max-width: 400px;
+    /* margin-bottom: 20px; */
+    
+    /* flex-basis: 30%; */
+    /* padding: 40px; */
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* .recommendation-photo-1 {
+    background-image: url('../../public/rec1.jpg');
+    background-size: cover;
+    background-position: center;
+} */

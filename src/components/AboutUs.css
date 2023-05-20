@@ -1,0 +1,33 @@
+.about-us-title {
+    text-align: left;
+    margin-bottom: 40px;
+    margin-left: 5%;
+    font-size: 64px;
+}
+
+.about-us-container {
+    padding: 120px 0;
+    position: relative;
+    /* padding-bottom: 100px; */
+}
+
+
+.about-us-photo {
+    width: 35%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-image: url('../../public/about-us.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.about-us-content {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 70px;
+}
+
+.about-us-description {
+    width: 50%;
+}
