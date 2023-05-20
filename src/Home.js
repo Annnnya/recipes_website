@@ -16,20 +16,6 @@ import './SlideShow.css';
 @import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
 </style> 
 
-const slides = [
-  {
-    imageUrl: require('https://www.google.com/search?q=weather&client=firefox-b-d&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjz-5Cjk4T_AhU1i8MKHZ56AzcQ_AUoA3oECAMQBQ&biw=1366&bih=588&dpr=1#imgrc=ZuptfM5RB6TDYM').default,
-    caption: 'Slide 1',
-  },
-  {
-    imageUrl: 'https://www.google.com/search?q=weather&client=firefox-b-d&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjz-5Cjk4T_AhU1i8MKHZ56AzcQ_AUoA3oECAMQBQ&biw=1366&bih=588&dpr=1#imgrc=ZuptfM5RB6TDYM',
-    caption: 'Slide 2',
-  },
-  {
-    imageUrl: 'https://www.google.com/search?q=weather&client=firefox-b-d&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjz-5Cjk4T_AhU1i8MKHZ56AzcQ_AUoA3oECAMQBQ&biw=1366&bih=588&dpr=1#imgrc=DoDSeWzdJbqUnM',
-    caption: 'Slide 3',
-  },
-];
 
 const MainPhoto = () => {
   return (
