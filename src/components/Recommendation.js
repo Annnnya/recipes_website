@@ -9,9 +9,9 @@ const Recommendation = () => {
       <h2 className="recommendation-section-title">Recommendation</h2>
       <p className = "recommendation-description">Today we want to recommend you these dishes:</p>
       <div className="recommendation-section-boxes">
-        <RecommendedDish imgurl = 'rec1.jpg'/>
-        <RecommendedDish imgurl = 'rec2.jpg'/>
-        <RecommendedDish imgurl = 'rec3.jpg'/>
+        <RecommendedDish id='first-rec' imgurl = 'rec1.jpg'/>
+        <RecommendedDish id='second-rec' imgurl = 'rec2.jpg'/>
+        <RecommendedDish id='third-rec' imgurl = 'rec3.jpg'/>
       </div>
     </section>
   );
