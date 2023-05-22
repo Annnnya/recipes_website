@@ -39,7 +39,11 @@ export async function createUser(username, firstName = '', lastName = '', email 
 	}
 }
 
-createUser('andrea_kozlovkyy', 'Andrea', 'Kozlovskyy', 'andrea.kozlovkyy@ucu.edu.ua')
-	.then(userData => {
-		console.log(userData);
-	});
+// createUser('andrea_kozlovkyy', 'Andrea', 'Kozlovskyy', 'andrea.kozlovkyy@ucu.edu.ua')
+// 	.then(userData => {
+// 		console.log(userData);
+// 	});
+
+export async function addToVishList() {
+
+}
