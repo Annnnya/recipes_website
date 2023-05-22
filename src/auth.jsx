@@ -7,7 +7,7 @@ export const AuthProvider = () => {
     const [user, setUser] = useState(auth.currentUser);
     
     useEffect(() => {
-        const unsub auth.onAuthStateChanged((maybeUser)=> {
+        const unsub = auth.onAuthStateChanged((maybeUser)=> {
             if (maybeUser!= null) {
                 return setUser(maybeUser);
             }
