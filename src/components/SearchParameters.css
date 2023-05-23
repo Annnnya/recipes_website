@@ -1,0 +1,56 @@
+.searchMenu {
+  width: 38.2%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -38.2%;
+  background-color: #f5f5f5;
+  transition: right 0.3s ease;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.searchMenu.active {
+  right: 0;
+}
+
+.searchMenu .mealType,
+.searchMenu .ingredientsInclude,
+.searchMenu .ingredientsExclude,
+.searchMenu .cuisine,
+.searchMenu .diets,
+.searchMenu .intolerances,
+.searchMenu .nutrients {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.searchMenu .nutrients div {
+  margin-bottom: 10px;
+}
+
+.searchMenu button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.searchMenu button:hover {
+  background-color: #45a049;
+}
+
+.show-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: min-content;
+  margin-right: 10px;
+}
