@@ -7,7 +7,11 @@ const AboutUs = () => {
       <h2 className="about-us-title">About Us</h2>
       <div className="about-us-content">
         <div className="about-us-description">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor quis augue vel ultrices. In luctus, ex in pellentesque vehicula, sapien metus consequat tellus, vitae iaculis quam lorem nec est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed fermentum massa id est vestibulum bibendum. Nullam pharetra augue quis ante accumsan, eget eleifend eros bibendum. Nam dapibus id est id facilisis. Fusce mollis, metus nec aliquam scelerisque, lacus augue posuere metus, sit amet rhoncus nulla quam nec augue. Aliquam hendrerit ultrices odio, vel bibendum velit consectetur eu. Etiam tincidunt tortor nisi, vitae aliquet elit tristique in. Ut imperdiet tellus id nulla mollis, ut consequat libero rutrum. Nulla ut dui vel nisi iaculis posuere in ut mauris.</p>
+          <p>Each recipe in "Kitchen Chronicles" is thoughtfully crafted, providing detailed step-by-step instructions, ingredient lists, and cooking tips to ensure your success in the kitchen.
+            From appetizers and main courses to desserts and beverages, you'll discover an abundance of culinary inspiration to satisfy your taste buds and impress your loved ones.
+            Whether you're looking for quick weekday meals, special occasion dishes, or creative twists on traditional recipes, "Kitchen Chronicles" is your go-to resource for all things culinary.
+            Join us on this gastronomic adventure, explore new flavors, and create cherished memories in your own kitchen. Let "Kitchen Chronicles" be your guide to unlock the secrets of
+            delectable dishes and unleash your inner chef.</p>
         </div>
         <div className="about-us-photo"></div>
       </div>

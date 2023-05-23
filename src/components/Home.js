@@ -21,7 +21,8 @@ const MainPhoto = () => {
       <div className="home-section">
         <div className="home-section-content">
           <h1>Welcome to Kitchen Chronicles</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Discover a vast collection of recipes carefully curated from around the world, brought
+            to you by passionate home cooks and seasoned chefs alike.</p>
           <button className = "search-button">
             <div className = "button-text">
               <img src="search.svg" className = "icon" alt="Search"/>
