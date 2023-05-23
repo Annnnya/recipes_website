@@ -3,7 +3,7 @@ import Home from './Home.js';
 import ProfilePage from './ProfilePage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Desktop1 from "./Desktop1";
-
+import RecipeComponent from './RecipeComponent.js';
 
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
 					<Route exact path="/" element={<Home />} />
 					<Route exact path="/profile" element={<ProfilePage />} />
 					<Route exact path="/auth" element={<Desktop1 />} />
+					<Route exact path="/dish-page/:recipeId" element={<RecipeComponent />} />
 				</Routes>
 			</Router>
 		</div>

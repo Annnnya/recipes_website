@@ -1,22 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './RecommendedDish.css';
 
-const RecommendedDish = (props) => {
+const RecommendedDish = ({imgurl, ingredients, id, title}) => {
   return (
     <div className="dish-block">
-      <img src={props.imgurl} className="recommendation-photo" alt="User account" />
-      <div className="overlay">
-        <pre className="text">
-          {/* Cuisine: {props.cuisine}<br /> */}
-          Main Ingredients:<br />
-          {props.ingredients1}<br />
-          {props.ingredients2}<br />
-          {props.ingredients3}<br />
-          {props.ingredients4}<br />
-          {props.ingredients5}<br />
-        </pre>
+      <Link to={`/dish-page/${id}`} className="dish-title">
+        <div className="hover-block">
+        <img src={imgurl} className="recommendation-photo" alt="User account" />
+      
+        <div className="overlay">
+          <pre className="text">
+            Main Ingredients:<br />
+            {ingredients.map((ingredient, index) => (
+              <span key={index}>{ingredient}<br /></span>
+            ))}
+          </pre>
+        </div>
       </div>
-      <h3>{props.title}</h3>
+      </Link>
+      <div className="title-block">
+        <Link to={`/dish-page/${id}`} className="dish-title">{title}</Link>
+      </div>
     </div>
   );
 };

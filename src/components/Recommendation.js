@@ -9,9 +9,9 @@ const Recommendation = () => {
   const [recommendedDishes, setRecommendedDishes] = useState([]);
 
   useEffect(() => {
-    const storedDishes = JSON.parse(localStorage.getItem('recommendedDishes'));
-    if (storedDishes) {
-      setRecommendedDishes(storedDishes);
+    const savedDishes = localStorage.getItem('recommendedDishes');
+    if (savedDishes) {
+      setRecommendedDishes(JSON.parse(savedDishes));
     } else {
       fetchRandomDishes();
     }
@@ -25,17 +25,15 @@ const Recommendation = () => {
         RandomDish()
       ]);
 
-      const dishes = results.map(result => ({
-        title: result[0].title,
-        img: result[0].image,
-        ingredients1: result[0].extendedIngredients[0].name,
-        ingredients2: result[0].extendedIngredients[1].name,
-        ingredients3: result[0].extendedIngredients[2].name,
-        ingredients4: result[0].extendedIngredients[3].name,
-        ingredients5: result[0].extendedIngredients[4].name,
-        id: result[0].id,
-        cuisine: result[0].cuisine
-      }));
+      const dishes = results.map(result => {
+        const ingredients = result[0].extendedIngredients.slice(0, 5).map(ingredient => ingredient.name);
+        return {
+          title: result[0].title,
+          img: result[0].image,
+          ingredients,
+          id: result[0].id,
+        };
+      });
 
       setRecommendedDishes(dishes);
       localStorage.setItem('recommendedDishes', JSON.stringify(dishes));
@@ -66,14 +64,9 @@ const RecommendedDishesContainer = () => {
     <RecommendedDish
       key={index}
       id={dish.id}
-      cuisine={dish.cuisine}
       imgurl={dish.img}
       title={dish.title}
-      ingredients1={dish.ingredients1}
-      ingredients2={dish.ingredients2}
-      ingredients3={dish.ingredients3}
-      ingredients4={dish.ingredients4}
-      ingredients5={dish.ingredients5}
+      ingredients={dish.ingredients}
     />
   ));
 };

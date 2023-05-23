@@ -16,18 +16,12 @@
     text-align: center;
     color: #fff;
     overflow: scroll;
-    height: calc(100vh - 40px)
 }
 
 .home-section-content h1 {
     font-size: 64px;
-    margin-bottom: 32px;
 }
 
-.home-section-content p {
-    font-size: 24px;
-    margin-bottom: 32px;
-}
 
 .home-section-content button {
     background-color: #000;
@@ -44,6 +38,7 @@
 }
 
 .search-button {
+    margin-top: 10px;
     border-radius: 20px;
     position: relative;
 }

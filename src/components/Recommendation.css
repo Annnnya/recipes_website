@@ -1,5 +1,5 @@
 .recommendation-section {
-    padding: 30px 0;
+    padding: 10px 0;
   }
 
 .recommendation-description {
@@ -21,9 +21,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 100px;
-    padding-left: 5%;
-    padding-right: 5%;
+    gap: 50px;
+    padding: 0 2px;
     height:40%;
 }
 
@@ -31,36 +30,3 @@
     position: relative;
     height: 600px;
 }
-
-
-/* .dish-block {
-    height: 100%;
-    width: 100%;
-    text-align: left;
-} */
-
-/* .recommendation-photo {
-    height: 70%;
-    width: 70%;
-    flex-basis: 30%;
-    padding: 40px;
-    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
-}
-
-.recommendation-photo-1 {
-    background-image: url('../../public/rec1.jpg');
-    background-size: cover;
-    background-position: center;
-} */
-
-/* .recommendation-photo-2 {
-    background-image: url('../../public/rec2.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.recommendation-photo-3 {
-    background-image: url('../../public/rec3.jpg');
-    background-size: cover;
-    background-position: center;
-} */
