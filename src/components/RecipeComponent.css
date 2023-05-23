@@ -1,0 +1,144 @@
+.recipe-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Changa', sans-serif;
+    color: #000000;
+  }
+  
+  .recipe-container::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .recipe-image {
+    float: left;
+    width: 40%;
+    max-height: 600px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .short-info {
+    float: right;
+    width: 60%;
+  }
+  
+  .recipe-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-info {
+    margin-bottom: 10px;
+  }
+  
+  .info-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .info-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-tags {
+    margin-bottom: 10px;
+  }
+  
+  .tags-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .tags-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tag-item {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #D9D9D9;
+    border-radius: 4px;
+  }
+  
+  .recipe-section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    clear: both;
+  }
+  
+  .recipe-ingredients {
+    padding: 5px;
+    margin: 10px;
+  }
+  
+  .ingredient-item {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .recipe-summary {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  
+  .recipe-instructions {
+    list-style-type: decimal;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .instruction-step {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  
+  .recipe-wine-pairing {
+    margin-bottom: 20px;
+  }
+  
+  .wine-pairing-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .wine-pairing-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .wine-pairing-item {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #D9D9D9;
+    border-radius: 4px;
+  }
+  
