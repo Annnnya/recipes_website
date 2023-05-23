@@ -1,0 +1,54 @@
+.home-section {
+    background-image: url('../../public/background-img.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    position: relative;
+    font-family: "Changa";
+    overflow: hidden;
+}
+
+.home-section-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    overflow: scroll;
+}
+
+.home-section-content h1 {
+    font-size: 64px;
+}
+
+
+.home-section-content button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 16px 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.home-section-content button:hover {
+    background-color: rgb(255, 115, 0);
+}
+
+.search-button {
+    margin-top: 10px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.button-text {
+    display: flex;
+    font-size: 32px;
+}
+
+.icon {
+    margin: 0 5%;
+    margin-top: 2%;
+}

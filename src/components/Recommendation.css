@@ -1,0 +1,32 @@
+.recommendation-section {
+    padding: 10px 0;
+  }
+
+.recommendation-description {
+    text-align: left;
+    margin-left: 5%;
+    font-size: 32px;
+}
+
+.recommendation-section-title {
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    font-size: 64px;
+}
+
+.recommendation-section-boxes {
+    margin-top: 5%;
+    /* width: 50%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 0 2px;
+    height:40%;
+}
+
+.Recommendation {
+    position: relative;
+    height: 600px;
+}
