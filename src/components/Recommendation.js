@@ -28,13 +28,13 @@ const Recommendation = () => {
       const dishes = results.map(result => ({
         title: result[0].title,
         img: result[0].image,
-        time: result[0].readyInMinutes,
         ingredients1: result[0].extendedIngredients[0].name,
         ingredients2: result[0].extendedIngredients[1].name,
         ingredients3: result[0].extendedIngredients[2].name,
         ingredients4: result[0].extendedIngredients[3].name,
         ingredients5: result[0].extendedIngredients[4].name,
-        dishtype: result[0].dishTypes[0]
+        id: result[0].id,
+        cuisine: result[0].cuisine
       }));
 
       setRecommendedDishes(dishes);
@@ -65,8 +65,8 @@ const RecommendedDishesContainer = () => {
   return recommendedDishes.map((dish, index) => (
     <RecommendedDish
       key={index}
-      id={`rec${index + 1}`}
-      time={dish.time}
+      id={dish.id}
+      cuisine={dish.cuisine}
       imgurl={dish.img}
       title={dish.title}
       ingredients1={dish.ingredients1}
@@ -74,7 +74,6 @@ const RecommendedDishesContainer = () => {
       ingredients3={dish.ingredients3}
       ingredients4={dish.ingredients4}
       ingredients5={dish.ingredients5}
-      dishtype={dish.dishtype}
     />
   ));
 };

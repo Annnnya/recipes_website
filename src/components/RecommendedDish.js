@@ -7,8 +7,7 @@ const RecommendedDish = (props) => {
       <img src={props.imgurl} className="recommendation-photo" alt="User account" />
       <div className="overlay">
         <pre className="text">
-          Time to cook: {props.time} min<br />
-          Type: {props.dishtype}<br />
+          Cuisine: {props.cuisine}<br />
           Main Ingredients:<br />
           {props.ingredients1}<br />
           {props.ingredients2}<br />

@@ -19,7 +19,7 @@ export async function RandomDish() {
 
 export async function createUser(username, firstName = '', lastName = '', email = '') {
 	try {
-		const response = await fetch(`https://api.spoonacular.com/users/connect?apiKey=${spoonacularKey}`, {
+		const response = await fetch(`https://api.spoonacular.com/users/connect?apiKey=${spoonacularKey}&number=1`, {
 			method: 'POST',
 			headers: {
 				'Accept': 'application/json',
@@ -39,10 +39,6 @@ export async function createUser(username, firstName = '', lastName = '', email 
 	}
 }
 
-// createUser('andrea_kozlovkyy', 'Andrea', 'Kozlovskyy', 'andrea.kozlovkyy@ucu.edu.ua')
-// 	.then(userData => {
-// 		console.log(userData);
-// 	});
 
 export async function addToVishList() {
 
