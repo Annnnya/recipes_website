@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SearchByParameters from './SearchParameters';
 import "./SearchPage.css"
 import RecommendedDish from './RecommendedDish';
-import NavigationSearchPage from './NavigatinSearchPage';
+import NavigationSearchPage from './NavigationSearchPage';
 
 const SearchPage = () => {
 

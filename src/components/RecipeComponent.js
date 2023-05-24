@@ -15,7 +15,6 @@ const RecipeComponent = () => {
                     `https://api.spoonacular.com/recipes/${recipeId.toString()}/information?apiKey=${apiKey}`
                 );
                 const data = await response.json();
-                console.log(data);
                 setRecipe(data);
             } catch (error) {
                 console.log(error);

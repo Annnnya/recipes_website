@@ -1,4 +1,3 @@
-status: 'success',
 username: 'andrea-kozlovkyy1',
 spoonacularPassword: 'peachnectarwith81purplepotato',
 hash: '87718b3846a15bdaa0dbb6f5754dc7385120b278'
