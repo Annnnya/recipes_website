@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SearchByParameters from './SearchParameters';
 import "./SearchPage.css"
 import RecommendedDish from './RecommendedDish';
-import NavigationSearchPage from './NavigationSearchPage';
+import Navigation from './Navigation';
 
 const SearchPage = () => {
 
@@ -62,7 +62,7 @@ const SearchPage = () => {
     return (
         <div>
 
-            <NavigationSearchPage/>
+            <Navigation/>
 
             <h1>Search Page</h1>
 

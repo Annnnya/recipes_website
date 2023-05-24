@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as ScrollLink} from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { Link } from 'react-router-dom';
 import "./Navigation.css";
 
@@ -10,27 +10,23 @@ const Navigation = () => {
       <div className="nav-right-side">
         <ul className="navigation-list">
           <li className="navigation-item">
-            <ScrollLink to="home-section" smooth={true} className="navigation-link">
+            <Link to="/" smooth={true} className="navigation-link">
               Home
-            </ScrollLink>
+            </Link>
           </li>
           <li className="navigation-item">
-            <ScrollLink
-              to="recommendation-section"
-              smooth={true}
-              className="navigation-link"
-            >
-              Recommendation
-            </ScrollLink>
-          </li>
-          <li className="navigation-item">
-            <ScrollLink to="AboutUs" smooth={true} className="navigation-link">
-              About
-            </ScrollLink>
+            <Link to="/search-page" smooth={true} className="navigation-link">
+              Search
+            </Link>
           </li>
           <li className="navigation-item">
             <Link to="/profile" smooth={true} className="navigation-link">
               Account
+            </Link>
+          </li>
+          <li className="navigation-item">
+            <Link to="/auth" smooth={true} className="navigation-link">
+              Register
             </Link>
           </li>
         </ul>
