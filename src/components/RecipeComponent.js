@@ -9,16 +9,23 @@ const RecipeComponent = () => {
     const { recipeId } = useParams();
 
     useEffect(() => {
-        const apiKey = '02855522d96c497d88f3fc4c6fdc54aa';
+        const apiKey = '6a48d07de9f24d56a4557a83139b796b';
+
         const fetchRecipe = async () => {
             try {
                 const response = await fetch(
                     `https://api.spoonacular.com/recipes/${recipeId.toString()}/information?apiKey=${apiKey}`
                 );
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch recipe');
+                }
+
                 const data = await response.json();
                 setRecipe(data);
             } catch (error) {
                 console.log(error);
+                // Handle error state here (e.g., set an error state)
             }
         };
 
@@ -32,7 +39,7 @@ const RecipeComponent = () => {
     const { title, image, extendedIngredients, summary, analyzedInstructions, readyInMinutes, winePairing, servings } = recipe;
 
     const removeHtmlTags = (text) => {
-        return text.replace(/<[^>]*>/g, '');
+        return text ? text.replace(/<[^>]*>/g, '') : '';
     };
 
     const processedSummary = removeHtmlTags(summary);

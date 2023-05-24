@@ -34,7 +34,7 @@ const SearchPage = () => {
 
 
     const handleSearch = () => {
-        const apiKey = '02855522d96c497d88f3fc4c6fdc54aa';
+        const apiKey = '6a48d07de9f24d56a4557a83139b796b';
         if (searchQuery) {
             // Perform search logic based on the search query
             const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchQuery}&addRecipeInformation=true&number=30&sort=popularity`;
