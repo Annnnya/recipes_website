@@ -3,13 +3,15 @@ import { useParams } from 'react-router-dom';
 import { BsClock, BsPeople, BsHeart } from 'react-icons/bs';
 import './RecipeComponent.css';
 import Navigation from './Navigation';
+import {spoonacularKey1} from '../utils'
+
 
 const RecipeComponent = () => {
     const [recipe, setRecipe] = useState(null);
     const { recipeId } = useParams();
 
     useEffect(() => {
-        const apiKey = '6a48d07de9f24d56a4557a83139b796b';
+        const apiKey = spoonacularKey1;
 
         const fetchRecipe = async () => {
             try {

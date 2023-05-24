@@ -3,6 +3,7 @@ import SearchByParameters from './SearchParameters';
 import "./SearchPage.css"
 import RecommendedDish from './RecommendedDish';
 import Navigation from './Navigation';
+import {spoonacularKey1} from '../utils'
 
 const SearchPage = () => {
 
@@ -34,7 +35,7 @@ const SearchPage = () => {
 
 
     const handleSearch = () => {
-        const apiKey = '6a48d07de9f24d56a4557a83139b796b';
+        const apiKey = spoonacularKey1;
         if (searchQuery) {
             // Perform search logic based on the search query
             const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchQuery}&addRecipeInformation=true&number=30&sort=popularity`;
