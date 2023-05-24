@@ -1,156 +1,173 @@
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .recipe-container {
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  padding: 0;
-  font-family: 'Changa', sans-serif;
-  color: #000000;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    padding: 0;
+    font-family: 'Changa', sans-serif;
+    color: #000000;
 }
 
 .recipe-container::after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .recipe-image {
-  float: left;
-  width: 40%;
-  max-height: 600px;
-  object-fit: cover;
-  margin-bottom: 20px;
-  border: 5px solid #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    float: left;
+    width: 40%;
+    max-height: 600px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .short-info {
-  float: right;
-  width: 60%;
+    float: right;
+    width: 60%;
 }
 
 .recipe-title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .recipe-info {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .info-title {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .info-text {
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
 .recipe-tags {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
 }
 
 .tags-title {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .tags-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tag-item {
-  font-size: 16px;
-  font-weight: 400;
-  padding: 5px 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  background-color: #D9D9D9;
-  border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background-color: #D9D9D9;
+    border-radius: 4px;
 }
 
 .recipe-section-title {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  clear: both;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    clear: both;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .recipe-ingredients {
-  padding: 20px;
-  margin: 10px;
-  background-color: #f7f7f7;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .ingredient-item {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 5px;
-  text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: left;
 }
 
 .recipe-summary {
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: justify;
-  margin: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 20px;
 }
 
 .recipe-instructions {
-  list-style-type: decimal;
-  padding: 20px;
-  margin: 20px;
+    list-style-type: decimal;
+    padding: 20px;
+    margin: 20px;
 }
 
 .instruction-step {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  text-align: justify;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: justify;
 }
 
 .recipe-wine-pairing {
-  margin: 20px;
+    margin: 20px;
 }
 
 .wine-pairing-title {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .wine-pairing-list {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
 
 .wine-pairing-item {
-  font-size: 16px;
-  font-weight: 500;
-  padding: 5px 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  background-color: #D9D9D9;
-  border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #D9D9D9;
+    border-radius: 4px;
 }
+
+.like-button {
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: rgba(255,91,141,0.51);
+}
+
+.like-button:hover {
+    background-color: rgba(255,91,141,0.87);
+    border: solid 2px;
+}
+

@@ -38,7 +38,7 @@ const SearchPage = () => {
         const apiKey = spoonacularKey1;
         if (searchQuery) {
             // Perform search logic based on the search query
-            const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchQuery}&addRecipeInformation=true&number=30&sort=popularity`;
+            const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchQuery}&addRecipeInformation=true&number=2&sort=popularity`;
 
             fetch(url)
                 .then(response => response.json())
@@ -51,7 +51,7 @@ const SearchPage = () => {
                     console.error('Error:', error);
                 });
         } else {
-            const url = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=18`
+            const url = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=2`
             fetch(url)
                 .then(response => response.json())
                 .then(data => {

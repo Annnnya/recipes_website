@@ -4,6 +4,7 @@ import { BsClock, BsPeople, BsHeart } from 'react-icons/bs';
 import './RecipeComponent.css';
 import Navigation from './Navigation';
 import {spoonacularKey1} from '../utils'
+import {addToWishList} from '../utils'
 
 
 const RecipeComponent = () => {
@@ -61,7 +62,11 @@ const RecipeComponent = () => {
             </div>
             <div className="recipe-info-container">
                 <h1 className="recipe-title">{title}</h1>
-                <button className="like-button">
+                <button className="like-button" onClick={() => {
+                    addToWishList("andrea-kozlovkyy1", "87718b3846a15bdaa0dbb6f5754dc7385120b278", recipeId).then(data => {
+                    	console.log(`Added a motherfucking dish with id=${recipeId} to wish list.`);
+                    });
+                }}>
                     <BsHeart className="heart-icon" />
                 </button>
                 {readyInMinutes && (
@@ -81,11 +86,13 @@ const RecipeComponent = () => {
                 {tags.length > 0 && (
                     <div className="recipe-tags">
                         <h2 className="tags-title">Tags:</h2>
-                        <ul className="tags-list">
-                            {tags.map((tag) => (
-                                <li key={tag} className="tag-item">{tag}</li>
-                            ))}
-                        </ul>
+                        <div className="tags">
+                            <ul className="tags-list">
+                                {tags.map((tag) => (
+                                    <li key={tag} className="tag-item">{tag}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 )}
             </div>
