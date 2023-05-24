@@ -1,9 +1,9 @@
 const spoonacularKey1 = "02855522d96c497d88f3fc4c6fdc54aa";
 
 export async function RandomDish() {
-    const first_part_link = `https://api.spoonacular.com/recipes/random?apiKey=${spoonacularKey1}`;
+    const query = `https://api.spoonacular.com/recipes/random?apiKey=${spoonacularKey1}`;
     const response = await fetch(
-        first_part_link
+        query
     );
     const data = await response.json();
 
@@ -41,7 +41,7 @@ export async function createUser(username, firstName = '', lastName = '', email 
 // 		console.log(userData);
 // 	});
 
-export async function addToWishList(username, hash, recipe_id) {
+export async function addToWishList(username, hash, recipeId) {
     try {
         const response = await fetch(`https://api.spoonacular.com/mealplanner/${username}/items?apiKey=${spoonacularKey1}&hash=${hash}`, {
             method: 'POST',
@@ -55,7 +55,7 @@ export async function addToWishList(username, hash, recipe_id) {
                 "position": 0,
                 "type": "RECIPE",
                 "value": {
-                    "id": recipe_id,
+                    "id": recipeId,
                     "servings": 1
                     // "title": "Spinach Salad with Roasted Vegetables and Spiced Chickpea",
                     // "imageType": "jpg",
