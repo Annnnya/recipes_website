@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { BsClock, BsPeople, BsHeart } from 'react-icons/bs';
 import './RecipeComponent.css';
+import Navigation from './Navigation';
 
 const RecipeComponent = () => {
     const [recipe, setRecipe] = useState(null);
@@ -45,6 +46,7 @@ const RecipeComponent = () => {
 
     return (
         <div className="recipe-container">
+            <Navigation/>
             <div className="recipe-image-container">
                 <img src={image} alt={title} className="recipe-image" />
             </div>

@@ -4,12 +4,17 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import "./SearchParameters.css";
 import Papa from 'papaparse';
-import { GoSettings } from 'react-icons/go'
+import { GoSettings } from 'react-icons/go';
+import { MdClose } from 'react-icons/md'
 
 const SearchByParameters = ({ onSearchResults }) => {
     const [mealType, setMealType] = useState('');
-    const handleMealTypeChange = (event) => {
-        setMealType(event.target.value);
+    const handleMealTypeChange = (selected) => {
+        if (selected) {
+            setMealType(selected.value);
+        } else {
+            setMealType('');
+        }
     };
 
     const [ingredientsInclude, setIngredientsInclude] = useState([]);
@@ -81,7 +86,6 @@ const SearchByParameters = ({ onSearchResults }) => {
     };
 
     const handleSearch = () => {
-        // Construct the Spoonacular API request based on the selected parameters
         const apiKey = 'e4ed392f455e4e18bdf6553c5b88581a';
         const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}`;
 
@@ -89,39 +93,34 @@ const SearchByParameters = ({ onSearchResults }) => {
 
         params.number = 30;
 
+        params.sort = "popularity";
+
         params.addRecipeInformation = true;
 
-        // Meal Type
         if (mealType) {
             params.type = mealType;
         }
 
-        // Ingredients to Include
         if (ingredientsInclude.length > 0) {
             params.includeIngredients = ingredientsInclude.join(',');
         }
 
-        // Ingredients to Exclude
         if (ingredientsExclude.length > 0) {
             params.excludeIngredients = ingredientsExclude.join(',');
         }
 
-        // Cuisine
         if (cuisine.length > 0) {
             params.cuisine = cuisine.join(',');
         }
 
-        // Diets
         if (diets.length > 0) {
             params.diet = diets.join(',');
         }
 
-        // Intolerances
         if (intolerances.length > 0) {
             params.intolerances = intolerances.join(',');
         }
 
-        // Nutrient Ranges
         params.maxCalories = nutrientRanges.calories[1];
         params.minCarbs = nutrientRanges.carbs[0];
         params.maxCarbs = nutrientRanges.carbs[1];
@@ -130,28 +129,23 @@ const SearchByParameters = ({ onSearchResults }) => {
         params.minProteins = nutrientRanges.proteins[0];
         params.maxProteins = nutrientRanges.proteins[1];
 
-        // Keyword search
         if (searchByKeyword) {
             params.query = searchByKeyword;
         }
 
-        // Convert params object to URL query string
         const queryString = Object.entries(params)
             .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
             .join('&');
 
-        // Full API URL with query string
         const fullApiUrl = `${apiUrl}&${queryString}`;
 
         fetch(fullApiUrl)
             .then(response => response.json())
             .then(data => {
-                // Handle the response data
                 console.log(data.results);
                 onSearchResults(data.results);
             })
             .catch(error => {
-                // Handle any errors
                 console.error('Error:', error);
             });
 
@@ -188,6 +182,11 @@ const SearchByParameters = ({ onSearchResults }) => {
         'fingerfood',
         'snack',
         'drink'];
+
+    const mealTypeOptions = mealTypes.map((type) => ({
+        value: type,
+        label: type,
+    }));
 
     const cuisineOptions = [
         "African",
@@ -236,13 +235,11 @@ const SearchByParameters = ({ onSearchResults }) => {
 
 
     useEffect(() => {
-        // Fetch the CSV file and parse the data
         Papa.parse('top-1k-ingredients.csv', {
             download: true,
             complete: function (results) {
-                // Extract the ingredients from the parsed CSV data
                 const ingredients = results.data.map((row) => ({
-                    value: row[1], // Assuming the name is in the first column and the ID is in the second column
+                    value: row[1],
                     label: row[0],
                 }));
 
@@ -254,28 +251,31 @@ const SearchByParameters = ({ onSearchResults }) => {
 
     return (
         <div>
-            <button className='show-button' onClick={toggleMenu}><GoSettings style = {{transform: 'rotate(90deg)' }} /></button>
+            <button className='show-button' onClick={toggleMenu}><GoSettings style={{ transform: 'rotate(90deg)' }} /></button>
             <div className={`searchMenu ${menuVisible ? 'active' : ''}`}>
 
-                <button onClick={toggleMenu}>Hide Advanced search</button>
+                <button className='close-button' onClick={toggleMenu}><MdClose size={40}/></button>
+
+                <h2>Start typing mane:</h2>
 
                 <input
                     type="text"
                     value={searchByKeyword}
                     onChange={handleSearchByKeywordChange}
-                    placeholder="Enter the foods name"
+                    placeholder="Enter the food's name"
+                    className='text-adv-search'
                 />
 
                 <div className="mealType">
                     <h2>Meal Type:</h2>
-                    <select value={mealType} onChange={handleMealTypeChange}>
-                        <option value="">Select a meal type</option>
-                        {mealTypes.map((type, index) => (
-                            <option key={index} value={type}>
-                                {type}
-                            </option>
-                        ))}
-                    </select>
+                    <Select
+                        id="mealType"
+                        name="mealType"
+                        options={mealTypeOptions}
+                        value={mealTypeOptions.find((option) => option.value === mealType)}
+                        onChange={handleMealTypeChange}
+                        isClearable
+                    />
                 </div>
 
                 <div className="ingredientsInclude">
@@ -349,7 +349,7 @@ const SearchByParameters = ({ onSearchResults }) => {
 
                 <div className="nutrients">
                     <h2>Nutrients per serving:</h2>
-                    <div className="calories">
+                    <div className="slider-div">
                         <label>Calories:</label>
                         <div>
                             <Slider
@@ -367,7 +367,7 @@ const SearchByParameters = ({ onSearchResults }) => {
                         </div>
                     </div>
 
-                    <div className="carbs">
+                    <div className="slider-div">
                         <label>Carbs:</label>
                         <div>
                             <Slider
@@ -383,7 +383,7 @@ const SearchByParameters = ({ onSearchResults }) => {
                         </div>
                     </div>
 
-                    <div className="fats">
+                    <div className="slider-div">
                         <label>Fats:</label>
                         <div>
                             <Slider
@@ -399,7 +399,7 @@ const SearchByParameters = ({ onSearchResults }) => {
                         </div>
                     </div>
 
-                    <div className="proteins">
+                    <div className="slider-div">
                         <label>Proteins:</label>
                         <div>
                             <Slider
@@ -417,9 +417,9 @@ const SearchByParameters = ({ onSearchResults }) => {
                         </div>
                     </div>
                 </div>
-                <button onClick={handleSearch}>Search</button>
+                <button className='search-button2' onClick={handleSearch}>Search</button>
             </div>
-        </div>
+        </div >
     );
 };
 

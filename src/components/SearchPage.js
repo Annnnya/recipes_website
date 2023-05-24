@@ -23,13 +23,21 @@ const SearchPage = () => {
         
         return [];
       };
+    
+      const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            // console.log(event);
+            event.preventDefault();
+            handleSearch();
+        }
+    }
       
 
     const handleSearch = () => {
         const apiKey = '02855522d96c497d88f3fc4c6fdc54aa';
         if (searchQuery) {
             // Perform search logic based on the search query
-            const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchQuery}&addRecipeInformation=true`;
+            const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchQuery}&addRecipeInformation=true&number=30&sort=popularity`;
 
             fetch(url)
                 .then(response => response.json())
@@ -41,7 +49,7 @@ const SearchPage = () => {
                     console.error('Error:', error);
                 });
         } else {
-            const url = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=30`
+            const url = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=18`
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
@@ -72,6 +80,7 @@ const SearchPage = () => {
                     value={searchQuery}
                     onChange={handleSearchQueryChange}
                     placeholder="Enter the food's name"
+                    onKeyDown={handleKeyDown}
                 />
                 <div className="search-controls-container">
                     <SearchByParameters onSearchResults={handleSearchResults} />
