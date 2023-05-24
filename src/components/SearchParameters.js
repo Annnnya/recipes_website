@@ -256,7 +256,7 @@ const SearchByParameters = ({ onSearchResults }) => {
 
                 <button className='close-button' onClick={toggleMenu}><MdClose size={40}/></button>
 
-                <h2>Start typing mane:</h2>
+                <h2>Start typing dish name:</h2>
 
                 <input
                     type="text"
