@@ -1,5 +1,10 @@
 import "./Desktop1.css";
+import React from "react";
+import {GoogleLogin} from "@react-oauth/google";
+
+
 const Desktop1 = () => {
+
     return (
         <div className="desktop-1">
             <input
@@ -13,15 +18,26 @@ const Desktop1 = () => {
                 type="text"
                 placeholder="Enter your password"
             />
-            <img className="desktop-1-child" alt="" src="/line-1.svg" />
-            <img className="desktop-1-item" alt="" src="/line-2.svg" />
-            <div className="desktop-1-inner" />
-            <div className="rectangle-div" />
+            <img className="desktop-1-child" alt="" src="/line-1.svg"/>
+            <img className="desktop-1-item" alt="" src="/line-2.svg"/>
+            <div className="desktop-1-inner"/>
+            <div className="rectangle-div"/>
             <a className="sign-in">Sign in</a>
             <a className="sign-up">Sign up</a>
-            <img className="rectangle-icon" alt="" src="/rectangle-2@2x.png" />
-            <a className="sign-in-with">Sign in with Google</a>
-            <img className="icons8-google-1" alt="" src="/icons8google-1.svg" />
+            <img className="rectangle-icon" alt="" src="/rectangle-2@2x.png"/>
+            <GoogleLogin
+                onSuccess={credentialResponse => {
+                    console.log(credentialResponse);
+                }}
+
+                onError={() => {
+                    console.log('Login Failed');
+                }}
+
+            />
+            {/* <div className="g-signin2" data-onsuccess="onSignIn" />
+    */}
+
         </div>
     );
 };

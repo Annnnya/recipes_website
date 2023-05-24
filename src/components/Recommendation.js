@@ -26,7 +26,12 @@ const Recommendation = () => {
       ]);
 
       const dishes = results.map(result => {
-        const ingredients = result[0].extendedIngredients.slice(0, 5).map(ingredient => ingredient.name);
+        let notEnough = 5;
+        if (result[0].extendedIngredients.length - 5 < 0) {
+          notEnough = result[0].extendedIngredients.length;
+        }
+        const ingredients = result[0].extendedIngredients.slice(0, notEnough).map(ingredient => ingredient.name);
+        // const ingredients = result[0].extendedIngredients.slice(0, 5).map(ingredient => ingredient.name);
         return {
           title: result[0].title,
           img: result[0].image,
@@ -62,7 +67,6 @@ const RecommendedDishesContainer = () => {
 
   return recommendedDishes.map((dish, index) => (
     <RecommendedDish
-      key={index}
       id={dish.id}
       imgurl={dish.img}
       title={dish.title}
