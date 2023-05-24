@@ -1,6 +1,6 @@
 .recommendation-section {
     padding: 10px 0;
-  }
+}
 
 .recommendation-description {
     text-align: left;
@@ -24,7 +24,7 @@
     justify-content: space-around;
     gap: 50px;
     padding: 0 2px;
-    height:40%;
+    height: 40%;
 }
 
 .Recommendation {

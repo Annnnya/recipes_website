@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { BsClock, BsPeople, BsHeart } from 'react-icons/bs';
+import React, {useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
+import {BsClock, BsPeople, BsHeart} from 'react-icons/bs';
 import './RecipeComponent.css';
 import Navigation from './Navigation';
 import {spoonacularKey1} from '../utils'
@@ -9,7 +9,7 @@ import {addToWishList} from '../utils'
 
 const RecipeComponent = () => {
     const [recipe, setRecipe] = useState(null);
-    const { recipeId } = useParams();
+    const {recipeId} = useParams();
 
     useEffect(() => {
         const apiKey = spoonacularKey1;
@@ -39,7 +39,16 @@ const RecipeComponent = () => {
         return <div>Loading recipe...</div>;
     }
 
-    const { title, image, extendedIngredients, summary, analyzedInstructions, readyInMinutes, winePairing, servings } = recipe;
+    const {
+        title,
+        image,
+        extendedIngredients,
+        summary,
+        analyzedInstructions,
+        readyInMinutes,
+        winePairing,
+        servings
+    } = recipe;
 
     const removeHtmlTags = (text) => {
         return text ? text.replace(/<[^>]*>/g, '') : '';
@@ -58,27 +67,27 @@ const RecipeComponent = () => {
         <div className="recipe-container">
             <Navigation/>
             <div className="recipe-image-container">
-                <img src={image} alt={title} className="recipe-image" />
+                <img src={image} alt={title} className="recipe-image"/>
             </div>
             <div className="recipe-info-container">
                 <h1 className="recipe-title">{title}</h1>
                 <button className="like-button" onClick={() => {
                     addToWishList("andrea-kozlovkyy1", "87718b3846a15bdaa0dbb6f5754dc7385120b278", recipeId).then(data => {
-                    	console.log(`Added a motherfucking dish with id=${recipeId} to wish list.`);
+                        console.log(`Added a motherfucking dish with id=${recipeId} to wish list.`);
                     });
                 }}>
-                    <BsHeart className="heart-icon" />
+                    <BsHeart className="heart-icon"/>
                 </button>
                 {readyInMinutes && (
                     <div className="recipe-info">
-                        <span className="info-icon"><BsClock /></span>
+                        <span className="info-icon"><BsClock/></span>
                         <span className="info-label">Cooking Time:</span>
                         <span className="info-text">{readyInMinutes} min</span>
                     </div>
                 )}
                 {servings && (
                     <div className="recipe-info">
-                        <span className="info-icon"><BsPeople /></span>
+                        <span className="info-icon"><BsPeople/></span>
                         <span className="info-label">Servings:</span>
                         <span className="info-text">{servings}</span>
                     </div>

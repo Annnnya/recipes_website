@@ -1,6 +1,6 @@
 import ReactSlider from 'react-slider';
 
-const RecipeSlider = ({ instructions, name, description, photo }) => {
+const RecipeSlider = ({instructions, name, description, photo}) => {
     return (
         <ReactSlider
             className="horizontal-slider"
@@ -15,7 +15,7 @@ const RecipeSlider = ({ instructions, name, description, photo }) => {
                     return (
                         <div className="custom-track">
                             <div className="recipe-info">
-                                <img src={photo} alt={name} />
+                                <img src={photo} alt={name}/>
                                 <h2>{name}</h2>
                                 <p>{description}</p>
                             </div>

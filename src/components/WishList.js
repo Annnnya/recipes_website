@@ -18,15 +18,13 @@ function WishList(props) {
         }
         const ingredients = dish.extendedIngredients.slice(0, notEnough).map(ingredient => ingredient.name);
 
-        return (
-            <RecommendedDish
+        return (<RecommendedDish
                 imgurl={dish.image}
                 ingredients={ingredients} // Pass the extracted ingredients here
                 id={dish.id}
                 title={dish.title}
                 key={index} // Add a unique key for each rendered component
-            />
-        );
+            />);
     });
 }
 

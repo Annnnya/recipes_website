@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import SearchByParameters from './SearchParameters';
 import "./SearchPage.css"
 import RecommendedDish from './RecommendedDish';
@@ -73,20 +73,20 @@ const SearchPage = () => {
     return (
         <div>
 
-            <Navigation />
+            <Navigation/>
 
             <h1>Search Page</h1>
 
             <div className='search-input'>
                 <input className='text-input'
-                    type="text"
-                    value={searchQuery}
-                    onChange={handleSearchQueryChange}
-                    placeholder="Enter the food's name"
-                    onKeyDown={handleKeyDown}
+                       type="text"
+                       value={searchQuery}
+                       onChange={handleSearchQueryChange}
+                       placeholder="Enter the food's name"
+                       onKeyDown={handleKeyDown}
                 />
                 <div className="search-controls-container">
-                    <SearchByParameters onSearchResults={handleSearchResults} />
+                    <SearchByParameters onSearchResults={handleSearchResults}/>
                     <button onClick={handleSearch} className="search-button">Search</button>
                 </div>
             </div>

@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
 
 import "./ProfilePage.css";
 import "./Recommendation.css";
-import { getRecipesFromWishList, getWishList } from "../utils";
+import {getRecipesFromWishList, getWishList} from "../utils";
 import WishList from "./WishList";
 import Navigation from "./Navigation";
 
@@ -25,12 +25,12 @@ class ProfilePage extends Component {
     }
 
     componentDidMount() {
-        const { username, hash } = this.state.user;
+        const {username, hash} = this.state.user;
 
         getWishList(username, hash)
             .then(data => getRecipesFromWishList(data.items))
             .then(recipes => {
-                this.setState({ wishList: recipes });
+                this.setState({wishList: recipes});
             })
             .catch(error => {
                 console.error("Error fetching wish list:", error);
@@ -38,7 +38,7 @@ class ProfilePage extends Component {
     }
 
     render() {
-        const { user, wishList } = this.state;
+        const {user, wishList} = this.state;
 
         if (!wishList) {
             return (
@@ -47,7 +47,7 @@ class ProfilePage extends Component {
                         Back to Home
                     </Link>
                     <div className="user-info">
-                        <img className="user-avatar" src={user.avatar} alt="User Avatar" />
+                        <img className="user-avatar" src={user.avatar} alt="User Avatar"/>
                         <div>
                             <h1>{user.username}</h1>
                             <p>{user.bio}</p>
@@ -63,10 +63,10 @@ class ProfilePage extends Component {
 
         return (
             <div>
-                <Navigation />
+                <Navigation/>
                 <div className="profile-page">
                     <div className="user-info">
-                        <img className="user-avatar" src={user.avatar} alt="User Avatar" />
+                        <img className="user-avatar" src={user.avatar} alt="User Avatar"/>
                         <div>
                             <h1>{user.username}</h1>
                             <p>{user.bio}</p>
@@ -76,7 +76,7 @@ class ProfilePage extends Component {
                     <div className="saved-recipes">
                         {/*Wishlist is displayed here*/}
                         <div className="recommendation-section-boxes">
-                            <WishList list={wishList} />
+                            <WishList list={wishList}/>
                         </div>
                     </div>
                 </div>

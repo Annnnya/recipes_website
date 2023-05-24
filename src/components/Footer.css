@@ -1,10 +1,10 @@
 footer {
     background-color: #92b4b6b4;
-        /* padding-top: 10px; */
+    /* padding-top: 10px; */
     /* padding-bottom: 10px; */
     text-align: center;
 }
-  
+
 footer p {
     font-size: 14px;
     color: #777;
@@ -34,18 +34,18 @@ footer p {
     align-items: center;
     text-align: center;
     padding: 0 10px;
-  }
-  
-  .rights-footer {
+}
+
+.rights-footer {
     margin-left: 35%;
     font-size: 18px;
-  }
-  
-  .soc-media {
+}
+
+.soc-media {
     display: flex;
     gap: 40px;
 }
-  
+
 .soc-icon {
     height: 70%;
     width: 70%;

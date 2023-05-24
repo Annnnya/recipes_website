@@ -1,8 +1,8 @@
 .body {
-  margin: 0;
-  transform: scale(0.3);
-  transform-origin: 0 0;
-  line-height: normal;
+    margin: 0;
+    transform: scale(0.3);
+    transform-origin: 0 0;
+    line-height: normal;
     --font-changa: Changa;
     --font-size-17xl: 20px;
     --color-white: #fff;
@@ -10,148 +10,163 @@
 }
 
 .create-acc-child {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
 }
+
 .enter-your-username {
-  border: 0;
-  font-family: var(--font-changa);
-  font-size: var(--font-size-17xl);
-  background-color: transparent;
-  position: absolute;
-  top: 248px;
-  left: 262px;
-  color: var(--color-gray);
-  text-align: left;
-  display: inline-block;
-  width: 548px;
-  height: 87px;
+    border: 0;
+    font-family: var(--font-changa);
+    font-size: var(--font-size-17xl);
+    background-color: transparent;
+    position: absolute;
+    top: 248px;
+    left: 262px;
+    color: var(--color-gray);
+    text-align: left;
+    display: inline-block;
+    width: 548px;
+    height: 87px;
 }
+
 .create-acc-item {
-  position: absolute;
-  top: 332px;
-  left: 200.99px;
-  width: 475.01px;
-  height: 5.01px;
+    position: absolute;
+    top: 332px;
+    left: 200.99px;
+    width: 475.01px;
+    height: 5.01px;
 }
+
 .enter-your-email,
 .enter-your-password {
-  border: 0;
-  font-family: var(--font-changa);
-  font-size: var(--font-size-17xl);
-  background-color: transparent;
-  position: absolute;
-  top: 400px;
-  left: 258px;
-  color: var(--color-gray);
-  text-align: left;
-  display: inline-block;
-  width: 548px;
-  height: 87px;
+    border: 0;
+    font-family: var(--font-changa);
+    font-size: var(--font-size-17xl);
+    background-color: transparent;
+    position: absolute;
+    top: 400px;
+    left: 258px;
+    color: var(--color-gray);
+    text-align: left;
+    display: inline-block;
+    width: 548px;
+    height: 87px;
 }
+
 .enter-your-password {
-  top: 553px;
+    top: 553px;
 }
+
 .create-acc-inner,
 .line-icon {
-  position: absolute;
-  top: 481px;
-  left: 200.99px;
-  width: 475.01px;
-  height: 5.01px;
+    position: absolute;
+    top: 481px;
+    left: 200.99px;
+    width: 475.01px;
+    height: 5.01px;
 }
+
 .line-icon {
-  top: 637px;
-  left: 200.99px;
+    top: 637px;
+    left: 200.99px;
 }
+
 .repeat-your-password {
-  border: 0;
-  font-family: var(--font-changa);
-  font-size: var(--font-size-17xl);
-  background-color: transparent;
-  position: absolute;
-  top: 714px;
-  left: 254px;
-  color: var(--color-gray);
-  text-align: left;
-  display: inline-block;
-  width: 548px;
-  height: 87px;
+    border: 0;
+    font-family: var(--font-changa);
+    font-size: var(--font-size-17xl);
+    background-color: transparent;
+    position: absolute;
+    top: 714px;
+    left: 254px;
+    color: var(--color-gray);
+    text-align: left;
+    display: inline-block;
+    width: 548px;
+    height: 87px;
 }
+
 .create-acc-child1,
 .rectangle-icon {
-  position: absolute;
-  top: 798px;
-  left: 200.99px;
-  width: 475.01px;
-  height: 5.01px;
+    position: absolute;
+    top: 798px;
+    left: 200.99px;
+    width: 475.01px;
+    height: 5.01px;
 }
 
 .rectangle-icon {
-  top: 0;
-  left: 60%;
-  width: 40%;
-  height: 100%;
-  object-fit: cover;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
 }
+
 .create-account {
-  margin: 0;
-  position: absolute;
-  top: 44px;
-  left: 121px;
-  display: inline-block;
-  width: 751px;
-  height: 141px;
+    margin: 0;
+    position: absolute;
+    top: 44px;
+    left: 121px;
+    display: inline-block;
+    width: 751px;
+    height: 141px;
 }
+
 .group-child {
-  position: absolute;
-  top: 42px;
-  left: 131px;
-  border-radius: 50px;
-  background-color: #fe7e36;
-  width: 563px;
-  height: 122px;
+    position: absolute;
+    top: 42px;
+    left: 131px;
+    border-radius: 50px;
+    background-color: #fe7e36;
+    width: 563px;
+    height: 122px;
 }
+
 .join-our-family {
-  font-size: 52px;
-  font-family: var(--font-changa);
-  color: var(--color-white);
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    font-size: 52px;
+    font-family: var(--font-changa);
+    color: var(--color-white);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .group-button,
 .join-our-family,
 .rectangle-parent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 834px;
-  height: 205px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 834px;
+    height: 205px;
 }
+
 .group-button {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: transparent;
-  top: 844px;
-  left: 82px;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    top: 844px;
+    left: 82px;
 }
+
 .group-button:active {
-  transform: scale(0.9);
+    transform: scale(0.9);
 }
+
 .create-acc {
-  position: relative;
-  width: 100%;
-  height: 1080px;
-  text-align: center;
-  font-size: 40px;
-  color: #000;
-  font-family: var(--font-changa);
-  transform: scale(0.6);
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    text-align: center;
+    font-size: 40px;
+    color: #000;
+    font-family: var(--font-changa);
+    transform: scale(0.6);
 }

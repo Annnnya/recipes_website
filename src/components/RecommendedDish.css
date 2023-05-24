@@ -1,66 +1,66 @@
 .dish-block {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  height: 100%;
-  width: 350px;
-  margin: 10px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    height: 100%;
+    width: 350px;
+    margin: 10px;
 }
 
 .hover-block {
-  position: relative;
+    position: relative;
 }
 
 .recommendation-photo {
-  transition: all 0.3s ease;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hover-block:hover .recommendation-photo {
-  transform: scale(1.1);
-  opacity: 0.8;
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .hover-block:hover .overlay {
-  opacity: 1;
+    opacity: 1;
 }
 
 .text {
-  color: #fff;
-  font-size: 14px;
-  text-align: left;
-  white-space: pre-wrap;
-  word-break: break-word;
-  padding: 20px;
+    color: #fff;
+    font-size: 14px;
+    text-align: left;
+    white-space: pre-wrap;
+    word-break: break-word;
+    padding: 20px;
 }
 
 .title-block {
-  margin-top: 10px;
-  font-size: 24px;
-  text-align: left;
+    margin-top: 10px;
+    font-size: 24px;
+    text-align: left;
 }
 
 .dish-title {
-  color: #000;
-  text-decoration: none;
+    color: #000;
+    text-decoration: none;
 }
 
 .dish-title:hover {
-  text-decoration: underline 1px;
+    text-decoration: underline 1px;
 }

@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import Select from 'react-select';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import "./SearchParameters.css";
 import Papa from 'papaparse';
-import { GoSettings } from 'react-icons/go';
-import { MdClose } from 'react-icons/md'
+import {GoSettings} from 'react-icons/go';
+import {MdClose} from 'react-icons/md'
 import {spoonacularKey1} from '../utils'
 
-const SearchByParameters = ({ onSearchResults }) => {
+const SearchByParameters = ({onSearchResults}) => {
     const [mealType, setMealType] = useState('');
     const handleMealTypeChange = (selected) => {
         if (selected) {
@@ -155,18 +155,18 @@ const SearchByParameters = ({ onSearchResults }) => {
 
 
     const intolerancesOptions = [
-        { value: 'Dairy', label: 'Dairy' },
-        { value: 'Egg', label: 'Egg' },
-        { value: 'Gluten', label: 'Gluten' },
-        { value: 'Grain', label: 'Grain' },
-        { value: 'Peanut', label: 'Peanut' },
-        { value: 'Seafood', label: 'Seafood' },
-        { value: 'Sesame', label: 'Sesame' },
-        { value: 'Shellfish', label: 'Shellfish' },
-        { value: 'Soy', label: 'Soy' },
-        { value: 'Sulfite', label: 'Sulfite' },
-        { value: 'Tree Nut', label: 'Tree Nut' },
-        { value: 'Wheat', label: 'Wheat' },
+        {value: 'Dairy', label: 'Dairy'},
+        {value: 'Egg', label: 'Egg'},
+        {value: 'Gluten', label: 'Gluten'},
+        {value: 'Grain', label: 'Grain'},
+        {value: 'Peanut', label: 'Peanut'},
+        {value: 'Seafood', label: 'Seafood'},
+        {value: 'Sesame', label: 'Sesame'},
+        {value: 'Shellfish', label: 'Shellfish'},
+        {value: 'Soy', label: 'Soy'},
+        {value: 'Sulfite', label: 'Sulfite'},
+        {value: 'Tree Nut', label: 'Tree Nut'},
+        {value: 'Wheat', label: 'Wheat'},
     ];
 
     const mealTypes = ['main course',
@@ -221,17 +221,17 @@ const SearchByParameters = ({ onSearchResults }) => {
 
 
     const dietOptions = [
-        { value: 'gluten-free', label: 'Gluten Free' },
-        { value: 'ketogenic', label: 'Ketogenic' },
-        { value: 'vegetarian', label: 'Vegetarian' },
-        { value: 'lacto-vegetarian', label: 'Lacto-Vegetarian' },
-        { value: 'ovo-vegetarian', label: 'Ovo-Vegetarian' },
-        { value: 'vegan', label: 'Vegan' },
-        { value: 'pescetarian', label: 'Pescetarian' },
-        { value: 'paleo', label: 'Paleo' },
-        { value: 'primal', label: 'Primal' },
-        { value: 'low-fodmap', label: 'Low FODMAP' },
-        { value: 'whole30', label: 'Whole30' },
+        {value: 'gluten-free', label: 'Gluten Free'},
+        {value: 'ketogenic', label: 'Ketogenic'},
+        {value: 'vegetarian', label: 'Vegetarian'},
+        {value: 'lacto-vegetarian', label: 'Lacto-Vegetarian'},
+        {value: 'ovo-vegetarian', label: 'Ovo-Vegetarian'},
+        {value: 'vegan', label: 'Vegan'},
+        {value: 'pescetarian', label: 'Pescetarian'},
+        {value: 'paleo', label: 'Paleo'},
+        {value: 'primal', label: 'Primal'},
+        {value: 'low-fodmap', label: 'Low FODMAP'},
+        {value: 'whole30', label: 'Whole30'},
     ];
 
 
@@ -252,7 +252,8 @@ const SearchByParameters = ({ onSearchResults }) => {
 
     return (
         <div>
-            <button className='show-button' onClick={toggleMenu}><GoSettings style={{ transform: 'rotate(90deg)' }} /></button>
+            <button className='show-button' onClick={toggleMenu}><GoSettings style={{transform: 'rotate(90deg)'}}/>
+            </button>
             <div className={`searchMenu ${menuVisible ? 'active' : ''}`}>
 
                 <button className='close-button' onClick={toggleMenu}><MdClose size={40}/></button>
@@ -420,7 +421,7 @@ const SearchByParameters = ({ onSearchResults }) => {
                 </div>
                 <button className='search-button2' onClick={handleSearch}>Search</button>
             </div>
-        </div >
+        </div>
     );
 };
 

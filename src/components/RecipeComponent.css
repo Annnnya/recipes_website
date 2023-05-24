@@ -163,11 +163,11 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 15px;
-    background-color: rgba(255,91,141,0.51);
+    background-color: rgba(255, 91, 141, 0.51);
 }
 
 .like-button:hover {
-    background-color: rgba(255,91,141,0.87);
+    background-color: rgba(255, 91, 141, 0.87);
     border: solid 2px;
 }
 
