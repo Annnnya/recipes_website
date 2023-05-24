@@ -1,4 +1,4 @@
-export const spoonacularKey1 = "6a48d07de9f24d56a4557a83139b796b";
+export const spoonacularKey1 = "ceb76f5eaab94d2da98b8ca64907e6f8";
 
 export async function RandomDish() {
     const query = `https://api.spoonacular.com/recipes/random?apiKey=${spoonacularKey1}`;
