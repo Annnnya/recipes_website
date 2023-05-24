@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import SearchByParameters from './SearchParameters';
-import SearchResult from './SearchResult';
 import "./SearchPage.css"
 import RecommendedDish from './RecommendedDish';
 import NavigationSearchPage from './NavigatinSearchPage';

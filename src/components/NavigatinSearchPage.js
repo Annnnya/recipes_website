@@ -20,11 +20,6 @@ const NavigationSearchPage = () => {
             </Link>
           </li>
         </ul>
-        <img
-          src="user-icon.svg"
-          className="icon user-icon"
-          alt="User account"
-        />
       </div>
     </nav>
   );

@@ -33,6 +33,7 @@
     padding: 8px 16px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .navigation-link:visited {
