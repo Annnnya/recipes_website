@@ -18,20 +18,20 @@ const SearchPage = () => {
 
     const getFirstFiveIngredients = (recipe) => {
         if (recipe.extendedIngredients && recipe.extendedIngredients.length > 0) {
-          return recipe.extendedIngredients.slice(0, 5).map(ingredient => ingredient.original);
+            return recipe.extendedIngredients.slice(0, 5).map(ingredient => ingredient.original);
         }
-        
+
         return [];
-      };
-    
-      const handleKeyDown = (event) => {
+    };
+
+    const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             // console.log(event);
             event.preventDefault();
             handleSearch();
         }
     }
-      
+
 
     const handleSearch = () => {
         const apiKey = '02855522d96c497d88f3fc4c6fdc54aa';
@@ -46,6 +46,7 @@ const SearchPage = () => {
                     setSearchResults(data.results);
                 })
                 .catch(error => {
+                    setSearchResults([]);
                     console.error('Error:', error);
                 });
         } else {
@@ -57,6 +58,7 @@ const SearchPage = () => {
                     setSearchResults(data.recipes);
                 })
                 .catch(error => {
+                    setSearchResults([]);
                     console.error('Error:', error);
                 });
         }
@@ -70,7 +72,7 @@ const SearchPage = () => {
     return (
         <div>
 
-            <Navigation/>
+            <Navigation />
 
             <h1>Search Page</h1>
 
@@ -90,13 +92,18 @@ const SearchPage = () => {
 
             <div className='search-section'>
                 <h2>Search Results</h2>
-                {searchResults.map((result) => (
-                    <RecommendedDish
-                    imgurl = {result.image}
-                    ingredients={getFirstFiveIngredients(result)}
-                    id  = {result.id}
-                    title = {result.title}/>
-                ))}
+                {searchResults && searchResults.length > 0 ? (
+                    searchResults.map((result) => (
+                        <RecommendedDish
+                            imgurl={result.image}
+                            ingredients={getFirstFiveIngredients(result)}
+                            id={result.id}
+                            title={result.title}
+                        />
+                    ))
+                ) : (
+                    <p>No results found.</p>
+                )}
             </div>
         </div>
     );
