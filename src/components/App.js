@@ -5,7 +5,7 @@ import ProfilePage from './ProfilePage';
 import Desktop1 from "./Desktop1";
 import RecipeComponent from './RecipeComponent.js';
 import SearchPage from './SearchPage';
-
+import CreateAcc from './CreateAcc';
 
 function App() {
 	return (
