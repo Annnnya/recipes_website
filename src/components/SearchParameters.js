@@ -6,6 +6,7 @@ import "./SearchParameters.css";
 import Papa from 'papaparse';
 import { GoSettings } from 'react-icons/go';
 import { MdClose } from 'react-icons/md'
+import {spoonacularKey1} from '../utils'
 
 const SearchByParameters = ({ onSearchResults }) => {
     const [mealType, setMealType] = useState('');
@@ -86,7 +87,7 @@ const SearchByParameters = ({ onSearchResults }) => {
     };
 
     const handleSearch = () => {
-        const apiKey = 'e4ed392f455e4e18bdf6553c5b88581a';
+        const apiKey = spoonacularKey1;
         const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}`;
 
         const params = {};
