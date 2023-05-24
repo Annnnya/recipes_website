@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { BsClock, BsPeople, BsHeart } from 'react-icons/bs';
 import './RecipeComponent.css';
 
-const RecipeComponent = ({ recipeId }) => {
+const RecipeComponent = () => {
     const [recipe, setRecipe] = useState(null);
+    const { recipeId } = useParams();
 
     useEffect(() => {
-        const apiKey = 'e4ed392f455e4e18bdf6553c5b88581a';
+        const apiKey = '02855522d96c497d88f3fc4c6fdc54aa';
         const fetchRecipe = async () => {
             try {
                 const response = await fetch(

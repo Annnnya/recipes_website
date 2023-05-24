@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import SearchByParameters from './SearchParameters';
 import SearchResult from './SearchResult';
 import "./SearchPage.css"
+import RecommendedDish from './RecommendedDish';
+import NavigationSearchPage from './NavigatinSearchPage';
 
 const SearchPage = () => {
 
@@ -15,10 +17,21 @@ const SearchPage = () => {
         setSearchResults(results);
     };
 
+    const getFirstFiveIngredients = (recipe) => {
+        if (recipe.extendedIngredients && recipe.extendedIngredients.length > 0) {
+          return recipe.extendedIngredients.slice(0, 5).map(ingredient => ingredient.original);
+        }
+        
+        return [];
+      };
+      
+
     const handleSearch = () => {
-        const apiKey = 'e4ed392f455e4e18bdf6553c5b88581a';
+        const apiKey = '02855522d96c497d88f3fc4c6fdc54aa';
         if (searchQuery) {
+            // Perform search logic based on the search query
             const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchQuery}&addRecipeInformation=true`;
+
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
@@ -47,10 +60,11 @@ const SearchPage = () => {
     }, []);
 
 
-
-
     return (
         <div>
+
+            <NavigationSearchPage/>
+
             <h1>Search Page</h1>
 
             <div className='search-input'>
@@ -69,14 +83,11 @@ const SearchPage = () => {
             <div className='search-section'>
                 <h2>Search Results</h2>
                 {searchResults.map((result) => (
-                    <SearchResult
-                        key={result.id}
-                        image={result.image}
-                        name={result.title}
-                        time={result.readyInMinutes}
-                        price={result.pricePerServing}
-                        details={result.summary}
-                    />
+                    <RecommendedDish
+                    imgurl = {result.image}
+                    ingredients={getFirstFiveIngredients(result)}
+                    id  = {result.id}
+                    title = {result.title}/>
                 ))}
             </div>
         </div>

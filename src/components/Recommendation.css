@@ -6,6 +6,7 @@
     text-align: left;
     margin-left: 5%;
     font-size: 32px;
+    overflow: scroll;
 }
 
 .recommendation-section-title {
