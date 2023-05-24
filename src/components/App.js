@@ -5,7 +5,7 @@ import ProfilePage from './ProfilePage';
 import Desktop1 from "./Desktop1";
 import RecipeComponent from './RecipeComponent.js';
 import SearchPage from './SearchPage';
-
+import CreateAcc from './CreateAcc';
 
 function App() {
 	return (
@@ -20,6 +20,7 @@ function App() {
 					<Route exact path="/auth" element={<Desktop1 />} />
 					<Route exact path="/dish-page/:recipeId" element={<RecipeComponent />} />
 					<Route exact path="/search-page" element={<SearchPage />} />
+					<Route exact path="/acc" element={<CreateAcc />} />
 				</Routes>
 			</Router>
 		</div>
