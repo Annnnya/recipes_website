@@ -11,7 +11,7 @@ To run this project as a ReactJS project, simply run:
 ```
 To run web app (Tauri), run this:
 ```shell
-    npm install --save-dev @tauri-apps/cli
+npm install --save-dev @tauri-apps/cli
 ```
 ...next, add this to your package.json file:
 
