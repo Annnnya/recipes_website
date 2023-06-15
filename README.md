@@ -5,9 +5,9 @@ An online recipe book app. It provides users with different options to search fo
 To run this project as a ReactJS project, simply run:
 
 ```shell
-    npm install
-    npm install @react-oauth/google
-    npm start
+npm install
+npm install @react-oauth/google
+npm start
 ```
 To run web app (Tauri), run this:
 ```shell
