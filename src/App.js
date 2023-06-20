@@ -2,9 +2,10 @@ import './App.css';
 import Home from './components/Home.js';
 import ProfilePage from './components/ProfilePage';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Desktop1 from "./components/Desktop1";
 import RecipeComponent from './components/RecipeComponent.js';
 import SearchPage from './components/SearchPage';
+import SignUpPage from "./components/SignUpPage";
+import SignInPage from "./components/SignInPage";
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={<Home/>}/>
                     <Route exact path="/profile" element={<ProfilePage/>}/>
-                    <Route exact path="/auth" element={<Desktop1/>}/>
+                    <Route exact path="/signup" element={<SignUpPage/>}/>
+                    <Route exact path="/signin" element={<SignInPage/>}/>
                     <Route exact path="/dish-page/:recipeId" element={<RecipeComponent/>}/>
                     <Route exact path="/search-page" element={<SearchPage/>}/>
                 </Routes>
