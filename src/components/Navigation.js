@@ -25,7 +25,7 @@ const Navigation = () => {
                         </Link>
                     </li>
                     <li className="navigation-item">
-                        <Link to="/auth" smooth={true} className="navigation-link">
+                        <Link to="/signup" smooth={true} className="navigation-link">
                             Register
                         </Link>
                     </li>

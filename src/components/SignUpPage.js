@@ -24,6 +24,9 @@ const SignUpPage = () => {
             <div className="signin-link">
                 <p>Already have an account? <Link to="/signin">Sign In</Link></p>
             </div>
+            <div className="return-home-link">
+                <p>Return back to <Link to="/">home</Link></p>
+            </div>
         </div>
     );
 };

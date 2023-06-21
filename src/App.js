@@ -6,6 +6,7 @@ import RecipeComponent from './components/RecipeComponent.js';
 import SearchPage from './components/SearchPage';
 import SignUpPage from "./components/SignUpPage";
 import SignInPage from "./components/SignInPage";
+import RustTest from "./components/RustTest";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
                     <Route exact path="/signin" element={<SignInPage/>}/>
                     <Route exact path="/dish-page/:recipeId" element={<RecipeComponent/>}/>
                     <Route exact path="/search-page" element={<SearchPage/>}/>
+                    <Route exact path="/test" element={<RustTest/>}/>
                 </Routes>
             </Router>
         </div>
